@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu’s Beauty Parlour • Premium Braiding London</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500&amp;display=swap');
+        
+        :root {
+            --gold: #d4af77;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .luxury-font {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .premium-bg {
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1594750472317-6e1f3f1f3f3f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80') center/cover no-repeat;
+        }
+
+        .section-header {
+            font-size: 2.5rem;
+            line-height: 1.1;
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #d4af77;
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .gold-accent {
+            color: #d4af77;
+        }
+
+        .premium-btn {
+            background: linear-gradient(to right, #c71585, #9f1239);
+            transition: all 0.3s ease;
+        }
+        
+        .premium-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(199 21 133 / 0.3);
+        }
+
+        .hamburger {
+            transition: all 0.3s ease;
+        }
+
+        .nav-active {
+            transform: translateX(0);
+        }
+
+        .review-slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .floating-whatsapp {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-white overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-black border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center px-6 py-5">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-11 h-11 bg-gradient-to-br from-[#d4af77] to-[#c71585] rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-crown text-black text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="luxury-font text-2xl font-bold tracking-tight">Lulu’s</span>
+                        <span class="text-sm text-[#d4af77] block -mt-1">Beauty Parlour</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#home" class="nav-link text-white/90 hover:text-white">Home</a>
+                    <a href="#styles" class="nav-link text-white/90 hover:text-white">Styles</a>
+                    <a href="#location" class="nav-link text-white/90 hover:text-white">Location</a>
+                    <a href="#contact" class="nav-link text-white/90 hover:text-white">Contact</a>
+                    <button onclick="showBookingModal()" 
+                            class="px-6 py-2.5 text-sm font-medium bg-white text-black rounded-full hover:bg-[#d4af77] transition-colors">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10 px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm">
+                <a href="#home" class="mobile-link py-2">Home</a>
+                <a href="#styles" class="mobile-link py-2">Styles</a>
+                <a href="#location" class="mobile-link py-2">Location</a>
+                <a href="#contact" class="mobile-link py-2">Contact</a>
+                <button onclick="showBookingModal(); closeMobileMenu()" 
+                        class="mt-2 w-full py-3 bg-white text-black rounded-full font-medium">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="premium-bg h-screen flex items-center relative">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-white/20">
+                <i class="fa-solid fa-globe text-[#d4af77]"></i>
+                <span class="text-sm tracking-[2px] font-medium">LONDON • EST. 2025</span>
+            </div>
+            
+            <h1 class="luxury-font text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-4">
+                Timeless Braids.<br>
+                <span class="gold-accent">Unforgettable Beauty.</span>
+            </h1>
+            
+            <p class="max-w-md mx-auto text-lg text-white/80 mb-8">
+                Premium protective hairstyles in Croydon, London.<br>
+                Home visits available across Greater London.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('styles').scrollIntoView({ behavior: 'smooth' })" 
+                        class="px-9 py-4 bg-white text-black font-semibold rounded-full flex items-center justify-center gap-x-2 hover:bg-[#d4af77] transition-all text-sm tracking-wider">
+                    <span>EXPLORE STYLES</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </button>
+                
+                <button onclick="showBookingModal()" 
+                        class="px-9 py-4 border border-white/70 hover:bg-white/10 transition-all rounded-full text-sm tracking-wider flex items-center justify-center gap-x-2">
+                    <span>BOOK APPOINTMENT</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+            <div class="flex flex-col items-center text-xs tracking-[3px] text-white/60">
+                SCROLL TO DISCOVER
+                <i class="fa-solid fa-chevron-down mt-1 animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="bg-black py-5 border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-10 gap-y-3 text-sm text-white/60">
+            <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-check text-[#d4af77]"></i>
+                <span>500+ Happy Clients</span>
+            </div>
+            <div>5 Signature Styles</div>
+            <div>Home Visits Across Greater London</div>
+            <div>Expert Protective Styling</div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="max-w-5xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="uppercase tracking-[3px] text-xs text-[#d4af77] mb-3">EST. 2025 • CROYDON</div>
+                <h2 class="luxury-font text-5xl leading-none tracking-tighter">Expert Braiding &amp; Beauty<br>in Croydon, London</h2>
+            </div>
+            <div class="text-white/80 text-lg">
+                At Lulu’s Beauty Parlour, we specialize in premium protective hairstyles that celebrate natural hair and cultural elegance. 
+                From classic box braids to intricate Fulani styles, our experienced stylists deliver flawless results with the utmost care.
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE STYLES -->
+    <section id="styles" class="bg-[#111] py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="uppercase tracking-[4px] text-xs text-[#d4af77] mb-2">SIGNATURE COLLECTION</div>
+                <h2 class="luxury-font text-5xl tracking-tighter">Our Hairstyle Catalog</h2>
+                <p class="text-white/70 mt-3 max-w-md mx-auto">Browse our most requested styles. All services available for home visits.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1594750472317-6e1f3f1f3f3f?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Box Braids">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Box Braids</h3>
+                    <p class="text-white/70 text-sm">Classic, versatile protective style. Perfect for all hair lengths and textures. Long-lasting and low maintenance.</p>
+                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-white/30 rounded-full hover:bg-white hover:text-black transition-colors">Book this Style</button>
+                </div>
+
+                <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Knotless Braids">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Knotless Braids</h3>
+                    <p class="text-white/70 text-sm">Pain-free, lightweight braids with a natural finish. Ideal for longer wear and less tension on the scalp.</p>
+                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-white/30 rounded-full hover:bg-white hover:text-black transition-colors">Book this Style</button>
+                </div>
+
+                <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
+                    <div class="mb-6">
+                        <img src=" <a href="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Cornrows">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Cornrows</h3>
+                    <p class="text-white/70 text-sm">Intricate scalp braids with endless design possibilities. Great for short hair and very low maintenance.</p>
+                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-white/30 rounded-full hover:bg-white hover:text-black transition-colors">Book this Style</button>
+                </div>
+
+                <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Twists &amp; Locs">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Twists &amp; Locs</h3>
+                    <p class="text-white/70 text-sm">Two-strand twists or starter locs. A healthy, low-maintenance option that promotes natural hair growth.</p>
+                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-white/30 rounded-full hover:bg-white hover:text-black transition-colors">Book this Style</button>
+                </div>
+
+                <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Fulani Braids">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Fulani &amp; Tribal Braids</h3>
+                    <p class="text-white/70 text-sm">Traditional Fulani styles with modern twists. Includes beads, shells and beautiful cultural flair.</p>
+                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-white/30 rounded-full hover:bg-white hover:text-black transition-colors">Book this Style</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOME VISITS -->
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center">
+        <div class="max-w-md mx-auto">
+            <i class="fa-solid fa-home text-4xl text-[#d4af77] mb-4"></i>
+            <h2 class="luxury-font text-4xl tracking-tight mb-3">Home Visits Available</h2>
+            <p class="text-white/70">We bring our expertise to your home or event around Croydon and Greater London. Perfect for parties, weddings, photoshoots or convenience.</p>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="bg-[#111] py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-5 gap-10">
+                <div class="md:col-span-2">
+                    <div class="uppercase tracking-[3px] text-xs text-[#d4af77] mb-2">VISIT US</div>
+                    <h2 class="luxury-font text-4xl tracking-tighter leading-none">Lulu’s Beauty Parlour</h2>
+                    <div class="mt-6 space-y-4 text-sm">
+                        <div>
+                            <div class="font-medium">Croydon, London SE25</div>
+                            <div>Accepting bookings around Croydon</div>
+                        </div>
+                        <div>
+                            <div class="font-medium">Opening Hours</div>
+                            <div>Tuesday – Sunday • 10am – 7pm</div>
+                        </div>
+                        <div>
+                            <div class="font-medium">Phone / WhatsApp</div>
+                            <a href="tel:+447398018555" class="text-[#d4af77]">+44 7398 018555</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Google Map -->
+                <div class="md:col-span-3 rounded-3xl overflow-hidden border border-white/10 h-[380px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8!2d-0.085!3d51.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c8f0c0c0c1%3A0xabcdef1234567890!2sCroydon%2C%20London%20SE25!5e0!3m2!1sen!2suk!4v1700000000000" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / REVIEWS -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <div class="text-[#d4af77] text-xs tracking-[3px]">LOVED BY OUR CLIENTS</div>
+            <h2 class="luxury-font text-4xl tracking-tighter mt-1">What Our Clients Say</h2>
+        </div>
+
+        <div id="review-carousel" class="relative max-w-2xl mx-auto">
+            <div class="review-slide" id="review-1">
+                <div class="bg-[#1a1a1a] p-9 rounded-3xl border border-white/10 text-center">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                    </div>
+                    <p class="italic">"Lulu did my knotless braids for my wedding. They were flawless and lasted the whole honeymoon. Best decision ever!"</p>
+                    <div class="mt-6 font-medium">— Amina K., Brixton</div>
+                </div>
+            </div>
+            
+            <div class="review-slide hidden" id="review-2">
+                <div class="bg-[#1a1a1a] p-9 rounded-3xl border border-white/10 text-center">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star-half-stroke text-[#d4af77]"></i>
+                    </div>
+                    <p class="italic">"I had Fulani braids done at home. Lulu was professional, the style was beautiful and she was so gentle. Highly recommend!"</p>
+                    <div class="mt-6 font-medium">— Zara M., Clapham</div>
+                </div>
+            </div>
+            
+            <div class="review-slide hidden" id="review-3">
+                <div class="bg-[#1a1a1a] p-9 rounded-3xl border border-white/10 text-center">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                        <i class="fa-solid fa-star text-[#d4af77]"></i>
+                    </div>
+                    <p class="italic">"The box braids I got are the best I’ve ever had. Clean, neat, and the service was luxury from start to finish."</p>
+                    <div class="mt-6 font-medium">— Blessing O., Peckham</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / BOOKING CTA -->
+    <section id="contact" class="bg-black py-16 border-t border-white/10">
+        <div class="max-w-xl mx-auto px-6 text-center">
+            <h2 class="luxury-font text-4xl tracking-tighter mb-3">Ready for your next look?</h2>
+            <p class="text-white/70 mb-8">Reach out today. Home visits available across Greater London.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showBookingModal()" 
+                        class="premium-btn px-10 py-4 rounded-full font-semibold text-sm tracking-wider">BOOK APPOINTMENT</button>
+                
+                <a href="https://wa.me/447398018555?text=Hello%20Lulu%27s%20Beauty%20Parlour%2C%20I%27d%20like%20to%20book%20an%20appointment." 
+                   target="_blank"
+                   class="px-8 py-4 border border-white/70 hover:bg-white/5 rounded-full flex items-center justify-center gap-x-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>WHATSAPP US</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 py-10 text-sm">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-y-6 text-white/60">
+            <div>
+                © 2026 Lulu’s Beauty Parlour. All Rights Reserved.<br>
+                <span class="text-xs">Premium Hair Braiding • London</span>
+            </div>
+            
+            <div class="flex items-center gap-x-5">
+                <a href="https://www.instagram.com/beautybylulu25/" target="_blank" class="hover:text-white"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="https://tiktok.com/@beautybylulu25" target="_blank" class="hover:text-white"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                <a href="https://wa.me/447398018555" target="_blank" class="hover:text-white"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/447398018555?text=Hello%20Lulu%27s%20Beauty%20Parlour%2C%20I%27d%20like%20to%20book%20a%20braiding%20appointment." 
+       target="_blank"
+       class="floating-whatsapp fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl z-50 hover:scale-110 transition-transform">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- BOOKING MODAL -->
+    <div id="booking-modal" onclick="if (event.target.id === 'booking-modal') hideBookingModal()" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="bg-[#1a1a1a] max-w-md w-full rounded-3xl p-8 border border-white/10">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="luxury-font text-2xl">Book Your Appointment</h3>
+                <button onclick="hideBookingModal()" class="text-2xl leading-none">&times;</button>
+            </div>
+            
+            <form id="booking-form" onsubmit="submitBooking(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label class="text-xs tracking-wider text-white/60">YOUR NAME</label>
+                        <input type="text" required class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 mt-1 focus:outline-none focus:border-[#d4af77]">
+                    </div>
+                    <div>
+                        <label class="text-xs tracking-wider text-white/60">PHONE / WHATSAPP</label>
+                        <input type="tel" required class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 mt-1 focus:outline-none focus:border-[#d4af77]">
+                    </div>
+                    <div>
+                        <label class="text-xs tracking-wider text-white/60">PREFERRED STYLE OR MESSAGE</label>
+                        <textarea rows="3" class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 mt-1 focus:outline-none focus:border-[#d4af77]"></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" 
+                        class="mt-6 w-full py-4 bg-white text-black font-semibold rounded-2xl hover:bg-[#d4af77] transition-colors">
+                    SEND MESSAGE • BOOK NOW
+                </button>
+                
+                <p class="text-center text-xs text-white/50 mt-4">We'll contact you shortly to confirm your appointment.<br>Home visits available!</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#d4af77');
+        }
+
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = hamburgerBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            const icon = hamburgerBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => closeMobileMenu());
+        });
+
+        let currentReview = 1;
+        const totalReviews = 3;
+
+        function showReview(n) {
+            for (let i = 1; i <= totalReviews; i++) {
+                const review = document.getElementById(`review-${i}`);
+                if (review) review.classList.add('hidden');
+            }
+            const activeReview = document.getElementById(`review-${n}`);
+            if (activeReview) activeReview.classList.remove('hidden');
+        }
+
+        function rotateReviews() {
+            currentReview = currentReview % totalReviews + 1;
+            showReview(currentReview);
+        }
+
+        setInterval(rotateReviews, 5000);
+
+        function showBookingModal() {
+            document.getElementById('booking-modal').classList.remove('hidden');
+            document.getElementById('booking-modal').classList.add('flex');
+        }
+
+        function hideBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function submitBooking(e) {
+            e.preventDefault();
+            const modalContent = document.querySelector('#booking-modal > div');
+            modalContent.innerHTML = `
+                <div class="text-center py-8">
+                    <i class="fa-solid fa-check-circle text-6xl text-[#d4af77] mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Thank you!</h3>
+                    <p class="text-white/70">We've received your booking request.<br>We'll contact you shortly via WhatsApp or phone.</p>
+                    <button onclick="hideBookingModal()" class="mt-6 px-8 py-3 bg-white text-black rounded-2xl font-medium">Close</button>
+                </div>
+            `;
+        }
+
+        function init() {
+            initializeTailwind();
+            showReview(1);
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape") {
+                    const modal = document.getElementById('booking-modal');
+                    if (!modal.classList.contains('hidden')) hideBookingModal();
+                }
+            });
+            
+            console.log('%c[Lulu’s Beauty Parlour] Premium website initialized successfully.', 'color:#666');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
