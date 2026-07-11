@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --gold: #d4af77;
+}
+
+body {
+    font-family: 'Inter', system_ui, sans-serif;
+}
+
+.luxury-font {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.premium-bg {
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1594750472317-6e1f3f1f3f3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+}
+
+.nav-link { transition: all 0.3s ease; }
+.nav-link:hover { color: #d4af77; }
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.gold-accent { color: #d4af77; }
+
+.premium-btn {
+    background: linear-gradient(to right, #c71585, #9f1239);
+    transition: all 0.3s ease;
+}
+.premium-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(199 21 133 / 0.3);
+}
+
+.floating-whatsapp {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
