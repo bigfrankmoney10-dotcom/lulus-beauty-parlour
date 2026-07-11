@@ -25,11 +25,6 @@
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1594750472317-6e1f3f1f3f3f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80') center/cover no-repeat;
         }
 
-        .section-header {
-            font-size: 2.5rem;
-            line-height: 1.1;
-        }
-
         .nav-link {
             transition: all 0.3s ease;
         }
@@ -61,18 +56,6 @@
             box-shadow: 0 10px 15px -3px rgb(199 21 133 / 0.3);
         }
 
-        .hamburger {
-            transition: all 0.3s ease;
-        }
-
-        .nav-active {
-            transform: translateX(0);
-        }
-
-        .review-slide {
-            transition: opacity 0.5s ease-in-out;
-        }
-
         .floating-whatsapp {
             animation: pulse 2s infinite;
         }
@@ -84,7 +67,6 @@
     <nav class="bg-black border-b border-white/10 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center px-6 py-5">
-                <!-- Logo -->
                 <div class="flex items-center gap-x-3">
                     <div class="w-11 h-11 bg-gradient-to-br from-[#d4af77] to-[#c71585] rounded-full flex items-center justify-center">
                         <i class="fa-solid fa-crown text-black text-2xl"></i>
@@ -95,36 +77,27 @@
                     </div>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-x-8 text-sm">
                     <a href="#home" class="nav-link text-white/90 hover:text-white">Home</a>
                     <a href="#styles" class="nav-link text-white/90 hover:text-white">Styles</a>
                     <a href="#location" class="nav-link text-white/90 hover:text-white">Location</a>
                     <a href="#contact" class="nav-link text-white/90 hover:text-white">Contact</a>
-                    <button onclick="showBookingModal()" 
-                            class="px-6 py-2.5 text-sm font-medium bg-white text-black rounded-full hover:bg-[#d4af77] transition-colors">
-                        Book Appointment
-                    </button>
+                    <button onclick="showBookingModal()" class="px-6 py-2.5 text-sm font-medium bg-white text-black rounded-full hover:bg-[#d4af77] transition-colors">Book Appointment</button>
                 </div>
 
-                <!-- Mobile Hamburger -->
                 <button id="hamburger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10 px-6 py-4">
             <div class="flex flex-col gap-y-4 text-sm">
                 <a href="#home" class="mobile-link py-2">Home</a>
                 <a href="#styles" class="mobile-link py-2">Styles</a>
                 <a href="#location" class="mobile-link py-2">Location</a>
                 <a href="#contact" class="mobile-link py-2">Contact</a>
-                <button onclick="showBookingModal(); closeMobileMenu()" 
-                        class="mt-2 w-full py-3 bg-white text-black rounded-full font-medium">
-                    Book Appointment
-                </button>
+                <button onclick="showBookingModal(); closeMobileMenu()" class="mt-2 w-full py-3 bg-white text-black rounded-full font-medium">Book Appointment</button>
             </div>
         </div>
     </nav>
@@ -208,7 +181,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
                     <div class="mb-6">
-                        <img src="https://images.unsplash.com/photo-1594750472317-6e1f3f1f3f3f?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Box Braids">
+                        <img src="https://i.ibb.co/nNRCNBr5/IMG-6498.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Box Braids">
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Box Braids</h3>
                     <p class="text-white/70 text-sm">Classic, versatile protective style. Perfect for all hair lengths and textures. Long-lasting and low maintenance.</p>
@@ -217,7 +190,7 @@
 
                 <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
                     <div class="mb-6">
-                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Knotless Braids">
+                        <img src="https://i.ibb.co/q3WtMmLb/IMG-6495.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Knotless Braids">
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Knotless Braids</h3>
                     <p class="text-white/70 text-sm">Pain-free, lightweight braids with a natural finish. Ideal for longer wear and less tension on the scalp.</p>
@@ -226,7 +199,7 @@
 
                 <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
                     <div class="mb-6">
-                        <img src=" <a href="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Cornrows">
+                        <img src="https://i.ibb.co/CKHHsLkK/IMG-6499.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Cornrows">
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Cornrows</h3>
                     <p class="text-white/70 text-sm">Intricate scalp braids with endless design possibilities. Great for short hair and very low maintenance.</p>
@@ -235,7 +208,7 @@
 
                 <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
                     <div class="mb-6">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Twists &amp; Locs">
+                        <img src="https://i.ibb.co/S4ZJ3xHd/IMG-6504.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Twists &amp; Locs">
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Twists &amp; Locs</h3>
                     <p class="text-white/70 text-sm">Two-strand twists or starter locs. A healthy, low-maintenance option that promotes natural hair growth.</p>
@@ -244,7 +217,7 @@
 
                 <div class="service-card bg-[#1a1a1a] p-8 rounded-3xl border border-white/10">
                     <div class="mb-6">
-                        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=60" class="rounded-2xl w-full h-56 object-cover" alt="Fulani Braids">
+                        <img src="https://i.ibb.co/6R0t9jZX/IMG-6509.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Fulani &amp; Tribal Braids">
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Fulani &amp; Tribal Braids</h3>
                     <p class="text-white/70 text-sm">Traditional Fulani styles with modern twists. Includes beads, shells and beautiful cultural flair.</p>
@@ -286,12 +259,8 @@
                     </div>
                 </div>
                 
-                <!-- Google Map -->
                 <div class="md:col-span-3 rounded-3xl overflow-hidden border border-white/10 h-[380px]">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8!2d-0.085!3d51.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c8f0c0c0c1%3A0xabcdef1234567890!2sCroydon%2C%20London%20SE25!5e0!3m2!1sen!2suk!4v1700000000000" 
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8!2d-0.085!3d51.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c8f0c0c0c1%3A0xabcdef1234567890!2sCroydon%2C%20London%20SE25!5e0!3m2!1sen!2suk!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
