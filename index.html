@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lulu’s Beauty Parlour • Premium Braiding London</title>
+    <title>Lulu’s Beauty Parlour • Premium Braiding South London</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -24,7 +24,7 @@
         }
 
         .premium-bg {
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1594750472317-6e1f3f1f3f3f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1594750472317-6e1f3f1f3f3f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80') center/cover no-repeat;
         }
 
         .nav-link {
@@ -61,85 +61,80 @@
         .floating-whatsapp {
             animation: pulse 2s infinite;
         }
+
+        .stats-number {
+            font-feature-settings: "tnum";
+        }
+
+        .bounce {
+            animation: bounceAnim 0.6s ease;
+        }
+
+        @keyframes bounceAnim {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
     </style>
 </head>
 <body class="bg-white text-black overflow-x-hidden">
 
-    <!-- NAVBAR -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <!-- DARK TRANSPARENT LOGO BAR (Like Your Screenshot) -->
+    <nav class="bg-black/80 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center px-6 py-5">
-                <div class="flex items-center gap-x-3">
-                    <div class="w-11 h-11 bg-gradient-to-br from-[#d4af77] to-[#c71585] rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-crown text-black text-2xl"></i>
-                    </div>
+                <div class="flex items-center gap-x-4">
+                    <img src="https://i.ibb.co/jvZmmt2H/IMG-6587.png" alt="Lulu’s Logo" class="w-12 h-12 object-contain mix-blend-screen">
                     <div>
-                        <span class="luxury-font text-2xl font-bold tracking-tight">Lulu’s</span>
-                        <span class="text-sm text-[#d4af77] block -mt-1">Beauty Parlour</span>
+                        <span class="luxury-font text-4xl font-bold tracking-tighter text-white">Lulu’s</span>
+                        <span class="text-xs text-[#d4af77] block -mt-1 tracking-widest">BEAUTY PARLOUR</span>
                     </div>
                 </div>
 
-                <div class="hidden md:flex items-center gap-x-8 text-sm">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-black">Home</a>
-                    <a href="#styles" class="nav-link text-gray-700 hover:text-black">Styles</a>
-                    <a href="#location" class="nav-link text-gray-700 hover:text-black">Location</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-black">Contact</a>
-                    <button onclick="showBookingModal()" class="px-6 py-2.5 text-sm font-medium bg-black text-white rounded-full hover:bg-[#d4af77] hover:text-black transition-colors">Book Appointment</button>
+                <div class="hidden md:flex items-center gap-x-8 text-sm text-white">
+                    <a href="#home" class="nav-link hover:text-[#d4af77]">Home</a>
+                    <a href="#styles" class="nav-link hover:text-[#d4af77]">Styles</a>
+                    <a href="#about" class="nav-link hover:text-[#d4af77]">About Me</a>
+                    <a href="#location" class="nav-link hover:text-[#d4af77]">Location</a>
+                    <a href="#contact" class="nav-link hover:text-[#d4af77]">Contact</a>
+                    <button onclick="showBookingModal()" class="px-6 py-2.5 text-sm font-medium bg-white text-black rounded-full hover:bg-[#d4af77] hover:text-black transition-colors">Book Appointment</button>
                 </div>
 
-                <button id="hamburger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-2xl text-black">
+                <button onclick="showMobileMenu()" class="md:hidden w-10 h-10 flex items-center justify-center text-3xl text-white">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4">
-            <div class="flex flex-col gap-y-4 text-sm text-gray-700">
-                <a href="#home" class="mobile-link py-2">Home</a>
-                <a href="#styles" class="mobile-link py-2">Styles</a>
-                <a href="#location" class="mobile-link py-2">Location</a>
-                <a href="#contact" class="mobile-link py-2">Contact</a>
-                <button onclick="showBookingModal(); closeMobileMenu()" class="mt-2 w-full py-3 bg-black text-white rounded-full font-medium">Book Appointment</button>
-            </div>
-        </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="premium-bg h-screen flex items-center relative text-white">
+    <!-- HERO -->
+    <section id="home" class="premium-bg h-screen flex items-center relative">
         <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-white/20">
+            <div class="inline-flex items-center gap-x-2 bg-black/10 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-white/30">
                 <i class="fa-solid fa-globe text-[#d4af77]"></i>
-                <span class="text-sm tracking-[2px] font-medium">LONDON • EST. 2025</span>
+                <span class="text-sm tracking-[2px] font-medium text-black">SOUTH LONDON • EST. 2019</span>
             </div>
             
-            <h1 class="luxury-font text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-4">
+            <h1 class="luxury-font text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-4 text-black">
                 Timeless Braids.<br>
-                <span class="gold-accent">Unforgettable Beauty.</span>
+                <span class="gold-accent">Your Hair, Your Style, Our Passion</span>
             </h1>
             
-            <p class="max-w-md mx-auto text-lg text-white/90 mb-8">
-                Premium protective hairstyles in, South London.<br>
-                Home visits available across South London.
+            <p class="max-w-md mx-auto text-lg text-gray-700 mb-8">
+                Premium protective hairstyles in South London.<br>
+                <span class="font-medium">Accepting bookings around South London</span>
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onclick="document.getElementById('styles').scrollIntoView({ behavior: 'smooth' })" 
-                        class="px-9 py-4 bg-white text-black font-semibold rounded-full flex items-center justify-center gap-x-2 hover:bg-[#d4af77] transition-all text-sm tracking-wider">
+                        class="px-9 py-4 bg-black text-white font-semibold rounded-full flex items-center justify-center gap-x-2 hover:bg-[#d4af77] transition-all text-sm tracking-wider">
                     <span>EXPLORE STYLES</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </button>
                 
                 <button onclick="showBookingModal()" 
-                        class="px-9 py-4 border border-white/70 hover:bg-white/10 transition-all rounded-full text-sm tracking-wider flex items-center justify-center gap-x-2">
+                        class="px-9 py-4 border border-gray-300 hover:bg-gray-100 transition-all rounded-full text-sm tracking-wider flex items-center justify-center gap-x-2">
                     <span>BOOK APPOINTMENT</span>
                 </button>
-            </div>
-        </div>
-
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
-            <div class="flex flex-col items-center text-xs tracking-[3px] text-white/70">
-                SCROLL TO DISCOVER
-                <i class="fa-solid fa-chevron-down mt-1 animate-bounce"></i>
             </div>
         </div>
     </section>
@@ -147,31 +142,34 @@
     <!-- TRUST BAR -->
     <div class="bg-white py-5 border-b border-gray-100">
         <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-10 gap-y-3 text-sm text-gray-600">
-            <div class="flex items-center gap-x-2">
-                <i class="fa-solid fa-check text-[#d4af77]"></i>
-                <span>500+ Happy Clients</span>
-            </div>
-            <div>5 Signature Styles</div>
-            <div>Home Visits Across South London</div>
-            <div>Expert Protective Styling</div>
+            <div>12+ Years of Experience</div>
+            <div>High Quality Services</div>
+            <div>Spacious & Modern Atmosphere</div>
+            <div>Highly Trained Team</div>
         </div>
     </div>
 
-    <!-- ABOUT -->
-    <section class="max-w-5xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="uppercase tracking-[3px] text-xs text-[#d4af77] mb-3">EST. 2025 • South London</div>
-                <h2 class="luxury-font text-5xl leading-none tracking-tighter">Expert Braiding &amp; Beauty<br>in South, London</h2>
-            </div>
-            <div class="text-gray-700 text-lg">
-                At Lulu’s Beauty Parlour, we specialize in premium protective hairstyles that celebrate natural hair and cultural elegance. 
-                From classic box braids to intricate Fulani styles, our experienced stylists deliver flawless results with the utmost care.
+    <!-- BIG STATS -->
+    <section class="py-16 bg-[#f5f0e6] text-black">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <h2 id="happy-clients" class="stats-number text-7xl font-bold mb-2">0</h2>
+                    <p class="text-2xl font-light">Happy Clients</p>
+                </div>
+                <div>
+                    <h2 id="exceptional-services" class="stats-number text-7xl font-bold mb-2">0</h2>
+                    <p class="text-2xl font-light">Exceptional Services</p>
+                </div>
+                <div>
+                    <h2 id="years-experience" class="stats-number text-7xl font-bold mb-2">0</h2>
+                    <p class="text-2xl font-light">Years Experience</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SIGNATURE STYLES -->
+    <!-- SIGNATURE STYLES (Grid with Rotating Images per Card) -->
     <section id="styles" class="bg-gray-50 py-16">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
@@ -181,49 +179,69 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Box Braids -->
                 <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="mb-6">
-                        <img src="https://i.ibb.co/nNRCNBr5/IMG-6498.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Box Braids">
+                    <div id="box-braids-carousel" class="mb-6 relative h-72 overflow-hidden rounded-2xl">
+                        <!-- JS populated -->
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Box Braids</h3>
-                    <p class="text-gray-600 text-sm">Classic, versatile protective style. Perfect for all hair lengths and textures. Long-lasting and low maintenance.</p>
-                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                    <p class="text-gray-600 text-sm">Classic, versatile protective style. Perfect for all hair lengths and textures.</p>
+                    <div class="flex gap-3 mt-6">
+                        <button onclick="showBookingModal()" class="flex-1 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                        <a href="https://www.pinterest.com/search/pins/?q=box+braids" target="_blank" class="flex-1 text-center text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors">See more styles →</a>
+                    </div>
                 </div>
 
+                <!-- Knotless Braids -->
                 <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="mb-6">
-                        <img src="https://i.ibb.co/q3WtMmLb/IMG-6495.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Knotless Braids">
+                    <div id="knotless-carousel" class="mb-6 relative h-72 overflow-hidden rounded-2xl">
+                        <!-- JS populated -->
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Knotless Braids</h3>
-                    <p class="text-gray-600 text-sm">Pain-free, lightweight braids with a natural finish. Ideal for longer wear and less tension on the scalp.</p>
-                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                    <p class="text-gray-600 text-sm">Pain-free, lightweight braids with a natural finish.</p>
+                    <div class="flex gap-3 mt-6">
+                        <button onclick="showBookingModal()" class="flex-1 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                        <a href="https://www.pinterest.com/search/pins/?q=knotless+braids" target="_blank" class="flex-1 text-center text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors">See more styles →</a>
+                    </div>
                 </div>
 
+                <!-- Cornrows -->
                 <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="mb-6">
-                        <img src="https://i.ibb.co/CKHHsLkK/IMG-6499.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Cornrows">
+                    <div id="cornrows-carousel" class="mb-6 relative h-72 overflow-hidden rounded-2xl">
+                        <!-- JS populated -->
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Cornrows</h3>
-                    <p class="text-gray-600 text-sm">Intricate scalp braids with endless design possibilities. Great for short hair and very low maintenance.</p>
-                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                    <p class="text-gray-600 text-sm">Intricate scalp braids with endless design possibilities.</p>
+                    <div class="flex gap-3 mt-6">
+                        <button onclick="showBookingModal()" class="flex-1 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                        <a href="https://www.pinterest.com/search/pins/?q=cornrows" target="_blank" class="flex-1 text-center text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors">See more styles →</a>
+                    </div>
                 </div>
 
+                <!-- Twists & Locs -->
                 <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="mb-6">
-                        <img src="https://i.ibb.co/S4ZJ3xHd/IMG-6504.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Twists &amp; Locs">
+                    <div id="twists-carousel" class="mb-6 relative h-72 overflow-hidden rounded-2xl">
+                        <!-- JS populated -->
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Twists &amp; Locs</h3>
-                    <p class="text-gray-600 text-sm">Two-strand twists or starter locs. A healthy, low-maintenance option that promotes natural hair growth.</p>
-                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                    <p class="text-gray-600 text-sm">Two-strand twists or starter locs. Healthy and low-maintenance.</p>
+                    <div class="flex gap-3 mt-6">
+                        <button onclick="showBookingModal()" class="flex-1 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                        <a href="https://www.pinterest.com/search/pins/?q=twists+and+locs" target="_blank" class="flex-1 text-center text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors">See more styles →</a>
+                    </div>
                 </div>
 
+                <!-- Fulani & Tribal -->
                 <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="mb-6">
-                        <img src="https://i.ibb.co/6R0t9jZX/IMG-6509.jpg" class="rounded-2xl w-full h-56 object-cover" alt="Fulani &amp; Tribal Braids">
+                    <div id="fulani-carousel" class="mb-6 relative h-72 overflow-hidden rounded-2xl">
+                        <!-- JS populated -->
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Fulani &amp; Tribal Braids</h3>
-                    <p class="text-gray-600 text-sm">Traditional Fulani styles with modern twists. Includes beads, shells and beautiful cultural flair.</p>
-                    <button onclick="showBookingModal()" class="mt-6 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                    <p class="text-gray-600 text-sm">Traditional Fulani styles with modern twists and cultural flair.</p>
+                    <div class="flex gap-3 mt-6">
+                        <button onclick="showBookingModal()" class="flex-1 text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-black hover:text-white transition-colors">Book this Style</button>
+                        <a href="https://www.pinterest.com/search/pins/?q=fulani+braids" target="_blank" class="flex-1 text-center text-sm px-6 py-2.5 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors">See more styles →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,12 +252,54 @@
         <div class="max-w-md mx-auto">
             <i class="fa-solid fa-home text-4xl text-[#d4af77] mb-4"></i>
             <h2 class="luxury-font text-4xl tracking-tight mb-3">Home Visits Available</h2>
-            <p class="text-gray-600">We bring our expertise to your home or event around South London. Perfect for parties, weddings, photoshoots or convenience.</p>
+            <p class="text-gray-600">We bring our expertise to your home or event around South London.</p>
+        </div>
+    </section>
+
+    <!-- WORKING HOURS -->
+    <section id="working-hours" class="bg-[#111] py-16 text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="luxury-font text-4xl tracking-tighter mb-8">Working Hours</h2>
+            
+            <div class="max-w-md space-y-1 text-lg">
+                <div class="flex justify-between py-3 border-b border-white/20">
+                    <span>Monday</span>
+                    <span class="text-white/60">Closed</span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-white/20">
+                    <span>Tuesday</span>
+                    <span>9:00 AM – 6:00 PM</span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-white/20">
+                    <span>Wednesday</span>
+                    <span>9:00 AM – 6:00 PM</span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-white/20">
+                    <span>Thursday</span>
+                    <span>9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-white/20">
+                    <span>Friday</span>
+                    <span>9:00 AM – 6:00 PM</span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-white/20">
+                    <span>Saturday</span>
+                    <span>9:00 AM – 6:00 PM</span>
+                </div>
+                <div class="flex justify-between py-3">
+                    <span>Sunday</span>
+                    <span class="text-white/60">Closed</span>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="italic text-2xl text-white/90">Come And Join Us To Experience<br>Our Full Range Of Bespoke Services</p>
+            </div>
         </div>
     </section>
 
     <!-- LOCATION -->
-    <section id="location" class="bg-gray-50 py-16">
+    <section id="location" class="bg-white py-16 border-t border-gray-100">
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid md:grid-cols-5 gap-10">
                 <div class="md:col-span-2">
@@ -247,75 +307,44 @@
                     <h2 class="luxury-font text-4xl tracking-tighter leading-none">Lulu’s Beauty Parlour</h2>
                     <div class="mt-6 space-y-4 text-sm">
                         <div>
-                            <div class="font-medium">South, London</div>
-                            <div>Accepting bookings around South London</div>
-                        </div>
-                        <div>
-                            <div class="font-medium">Opening Hours</div>
-                            <div>Tuesday – Sunday • 10am – 7pm</div>
+                            <div class="font-medium">South London</div>
                         </div>
                         <div>
                             <div class="font-medium">Phone / WhatsApp</div>
-                            <a href="tel:+447398018555" class="text-[#d4af77]">+44 7398 018555</a>
+                            <a href="tel:07897838915" class="text-[#d4af77]">07897 838915</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="md:col-span-3 rounded-3xl overflow-hidden border border-gray-200 h-[380px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8!2d-0.085!3d51.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c8f0c0c0c1%3A0xabcdef1234567890!2sCroydon%2C%20London%20SE25!5e0!3m2!1sen!2suk!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8!2d-0.085!3d51.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c8f0c0c0c1%3A0xabcdef1234567890!2sSouth%20London!5e0!3m2!1sen!2suk!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS / REVIEWS -->
+    <!-- TESTIMONIALS (Rotating) -->
     <section class="max-w-4xl mx-auto px-6 py-16">
         <div class="text-center mb-10">
             <div class="text-[#d4af77] text-xs tracking-[3px]">LOVED BY OUR CLIENTS</div>
             <h2 class="luxury-font text-4xl tracking-tighter mt-1">What Our Clients Say</h2>
         </div>
 
-        <div id="review-carousel" class="relative max-w-2xl mx-auto">
-            <div class="review-slide" id="review-1">
-                <div class="bg-white p-9 rounded-3xl border border-gray-100 text-center">
-                    <div class="flex justify-center mb-4">
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                    </div>
-                    <p class="italic">"Lulu did my knotless braids for my wedding. They were flawless and lasted the whole honeymoon. Best decision ever!"</p>
-                    <div class="mt-6 font-medium">— Amina K., Brixton</div>
-                </div>
+        <div id="testimonial-carousel" class="relative">
+            <!-- Populated by JS -->
+        </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="max-w-5xl mx-auto px-6 py-16 bg-gray-50">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="uppercase tracking-[3px] text-xs text-[#d4af77] mb-3">MEET THE FOUNDER</div>
+                <h2 class="luxury-font text-5xl leading-none tracking-tighter">About Me</h2>
             </div>
-            
-            <div class="review-slide hidden" id="review-2">
-                <div class="bg-white p-9 rounded-3xl border border-gray-100 text-center">
-                    <div class="flex justify-center mb-4">
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star-half-stroke text-[#d4af77]"></i>
-                    </div>
-                    <p class="italic">"I had Fulani braids done at home. Lulu was professional, the style was beautiful and she was so gentle. Highly recommend!"</p>
-                    <div class="mt-6 font-medium">— Zara M., Clapham</div>
-                </div>
-            </div>
-            
-            <div class="review-slide hidden" id="review-3">
-                <div class="bg-white p-9 rounded-3xl border border-gray-100 text-center">
-                    <div class="flex justify-center mb-4">
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                        <i class="fa-solid fa-star text-[#d4af77]"></i>
-                    </div>
-                    <p class="italic">"The box braids I got are the best I’ve ever had. Clean, neat, and the service was luxury from start to finish."</p>
-                    <div class="mt-6 font-medium">— Blessing O., Peckham</div>
-                </div>
+            <div class="text-gray-700 text-lg">
+                Hi, I’m Lulu, the heart and hands behind Lulu’s Beauty Parlour. With years of passion and expertise in protective hairstyling, I created this space to celebrate natural hair and timeless cultural elegance in South London 
+                Every braid, loc, and style I create is crafted with care, precision, and love. My mission is to help every client feel seen, beautiful, and confident. Whether you’re visiting for a special occasion or your regular selfcare appointment, you’ll always leave feeling relaxed, refreshed, and radiant.
             </div>
         </div>
     </section>
@@ -323,14 +352,14 @@
     <!-- CONTACT / BOOKING CTA -->
     <section id="contact" class="bg-white py-16 border-t border-gray-100">
         <div class="max-w-xl mx-auto px-6 text-center">
-            <h2 class="luxury-font text-4xl tracking-tighter mb-3">Ready for your next look?</h2>
-            <p class="text-gray-600 mb-8">Reach out today. Home visits available across South London.</p>
+            <h2 class="luxury-font text-4xl tracking-tighter mb-3">Ready To Experience The Ultimate Hair &amp; Beauty Indulgence?</h2>
+            <p class="text-gray-600 mb-8">Book Your Appointment At Lulu’s Beauty Parlour Today!</p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onclick="showBookingModal()" 
                         class="premium-btn px-10 py-4 rounded-full font-semibold text-sm tracking-wider">BOOK APPOINTMENT</button>
                 
-                <a href="https://wa.me/447398018555?text=Hello%20Lulu%27s%20Beauty%20Parlour%2C%20I%27d%20like%20to%20book%20an%20appointment." 
+                <a href="https://wa.me/447897838915?text=Hello%20Lulu%27s%20Beauty%20Parlour%2C%20I%27d%20like%20to%20book%20an%20appointment." 
                    target="_blank"
                    class="px-8 py-4 border border-gray-300 hover:bg-gray-100 rounded-full flex items-center justify-center gap-x-2 text-sm">
                     <i class="fa-brands fa-whatsapp text-xl"></i>
@@ -345,30 +374,30 @@
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-y-6 text-gray-500">
             <div>
                 © 2026 Lulu’s Beauty Parlour. All Rights Reserved.<br>
-                <span class="text-xs">Premium Hair Braiding • London</span>
+                <span class="text-xs">Premium Hair Braiding • South London</span>
             </div>
             
             <div class="flex items-center gap-x-5">
                 <a href="https://www.instagram.com/beautybylulu25/" target="_blank" class="hover:text-black"><i class="fa-brands fa-instagram text-xl"></i></a>
                 <a href="https://tiktok.com/@beautybylulu25" target="_blank" class="hover:text-black"><i class="fa-brands fa-tiktok text-xl"></i></a>
-                <a href="https://wa.me/447398018555" target="_blank" class="hover:text-black"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                <a href="https://wa.me/447897838915" target="_blank" class="hover:text-black"><i class="fa-brands fa-whatsapp text-xl"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/447398018555?text=Hello%20Lulu%27s%20Beauty%20Parlour%2C%20I%27d%20like%20to%20book%20a%20braiding%20appointment." 
+    <a href="https://wa.me/447897838915?text=Hello%20Lulu%27s%20Beauty%20Parlour%2C%20I%27d%20like%20to%20book%20a%20braiding%20appointment." 
        target="_blank"
        class="floating-whatsapp fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl z-50 hover:scale-110 transition-transform">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
     <!-- BOOKING MODAL -->
-    <div id="booking-modal" onclick="if (event.target.id === 'booking-modal') hideBookingModal()" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
+    <div id="booking-modal" onclick="if (event.target.id === 'booking-modal') hideBookingModal()" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4">
         <div onclick="event.stopImmediatePropagation()" class="bg-white max-w-md w-full rounded-3xl p-8 border border-gray-100">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="luxury-font text-2xl text-black">Book Your Appointment</h3>
-                <button onclick="hideBookingModal()" class="text-2xl leading-none text-gray-500">&times;</button>
+                <button onclick="hideBookingModal()" class="text-2xl leading-none text-gray-400">&times;</button>
             </div>
             
             <form id="booking-form" onsubmit="submitBooking(event)">
@@ -397,55 +426,175 @@
         </div>
     </div>
 
+    <!-- TRANSPARENT HAMBURGER MENU (0.55-second premium delay) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black/95 backdrop-blur-2xl z-[200] flex flex-col">
+        <div class="p-6 flex-1">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center gap-x-3">
+                    <img src="https://i.ibb.co/jvZmmt2H/IMG-6587.png" alt="Lulu’s Logo" class="w-14 h-14 object-contain mix-blend-multiply">
+                    <span class="luxury-font text-3xl font-bold text-white">Lulu’s</span>
+                </div>
+                <button onclick="closeMobileMenu()" class="text-4xl text-white">×</button>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex justify-center gap-6 mb-10">
+                <a href="https://www.instagram.com/beautybylulu25/" target="_blank" class="text-3xl text-white hover:text-[#d4af77]"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com/@beautybylulu25" target="_blank" class="text-3xl text-white hover:text-[#d4af77]"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/447897838915" target="_blank" class="text-3xl text-white hover:text-[#d4af77]"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="flex flex-col text-white text-xl space-y-1">
+                <a onclick="navigateWithDelay(this, '#home')" class="py-4 border-b border-white/20 cursor-pointer">Home</a>
+                <a onclick="navigateWithDelay(this, '#styles')" class="py-4 border-b border-white/20 cursor-pointer flex justify-between">Services <span class="text-sm opacity-60">›</span></a>
+                <a onclick="navigateWithDelay(this, '#about')" class="py-4 border-b border-white/20 cursor-pointer">About Us</a>
+                <a onclick="navigateWithDelay(this, '#contact')" class="py-4 border-b border-white/20 cursor-pointer">Contact Us</a>
+                <a onclick="navigateWithDelay(this, '#working-hours')" class="py-4 border-b border-white/20 cursor-pointer">Working Hours</a>
+                <a onclick="navigateWithDelay(this, '#styles')" class="py-4 cursor-pointer">Gallery</a>
+            </div>
+
+            <div class="mt-12">
+                <button onclick="showBookingModal(); closeMobileMenu()" 
+                        class="w-full py-4 bg-white text-black font-semibold rounded-2xl flex items-center justify-center gap-x-2 text-lg">
+                    <i class="fa-solid fa-check"></i>
+                    Request An Appointment
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         function initializeTailwind() {
             document.documentElement.style.setProperty('--accent', '#d4af77');
         }
 
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = hamburgerBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
+        function showMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            setTimeout(() => {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            }, 550);
+        }
 
         function closeMobileMenu() {
-            mobileMenu.classList.add('hidden');
-            const icon = hamburgerBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.remove('flex');
+            menu.classList.add('hidden');
         }
 
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => closeMobileMenu());
-        });
-
-        let currentReview = 1;
-        const totalReviews = 3;
-
-        function showReview(n) {
-            for (let i = 1; i <= totalReviews; i++) {
-                const review = document.getElementById(`review-${i}`);
-                if (review) review.classList.add('hidden');
-            }
-            const activeReview = document.getElementById(`review-${n}`);
-            if (activeReview) activeReview.classList.remove('hidden');
+        function navigateWithDelay(el, target) {
+            const originalText = el.innerHTML;
+            el.innerHTML = `<span class="flex items-center gap-2"><div class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Loading...</span>`;
+            
+            setTimeout(() => {
+                el.innerHTML = originalText;
+                closeMobileMenu();
+                const section = document.querySelector(target);
+                if (section) section.scrollIntoView({ behavior: 'smooth' });
+            }, 1500);
         }
 
-        function rotateReviews() {
-            currentReview = currentReview % totalReviews + 1;
-            showReview(currentReview);
+        // Per Style Images
+        const styleImages = {
+            box: [
+                "https://i.ibb.co/nNRCNBr5/IMG-6498.jpg",
+                "https://i.ibb.co/Ngb917Pp/7993-FFD2-779-B-41-C1-9-FF4-7817-A4-CD624-A.jpg",
+                "https://i.ibb.co/Kc4tzBX8/4545-C3-D1-FB5-A-4-B1-B-B64-A-456-A265-C6-EA4.jpg",
+                "https://i.ibb.co/QjfCs2wj/IMG-6619.jpg"
+            ],
+            knotless: [
+                "https://i.ibb.co/zhzy5FwL/f2c3bc21-8085-439d-b037-b878ef69299a.jpg",
+                "https://i.ibb.co/whVqLKqM/60958063-34-F5-4012-B702-275-B2-DF1-D254.jpg",
+                "https://i.ibb.co/JjX1jDmk/6-F0-C31-C6-08-D9-440-C-AC6-D-0-EFB289-B8-C02.jpg",
+                "https://i.ibb.co/zTd1qTWM/894-A6-F4-B-11-B0-45-F2-9-EA0-D17-C80121-B4-C.jpg"
+            ],
+            cornrows: [
+                "https://i.ibb.co/VcCjDdkc/fbfb3f75-9c01-4990-b7e3-f16dc7dca4ad.jpg",
+                "https://i.ibb.co/7Pz3kpZ/IMG-6607.jpg",
+                "https://i.ibb.co/RGbDJKLD/08584-DF0-8-E29-41-CA-A39-E-AAAE2-C34-A2-F8.jpg",
+                "https://i.ibb.co/99D0HqQr/IMG-6608.jpg"
+            ],
+            twists: [
+                "https://i.ibb.co/S4ZJ3xHd/IMG-6504.jpg",
+                "https://i.ibb.co/dsZQc0Mb/IMG-6622.jpg",
+                "https://i.ibb.co/TMNHsdp8/B89-DFC90-7001-4754-BA0-A-41-FBAB1-D0-E11.jpg",
+                "https://i.ibb.co/8nznkhFv/21-A19575-C3-A3-41-D9-88-E8-2-B48104-B60-AE.jpg"
+            ],
+            fulani: [
+                "https://i.ibb.co/6R0t9jZX/IMG-6509.jpg",
+                "https://i.ibb.co/cB07qv5/CC84-A77-B-4-D37-464-F-9-B12-C16-DE8-FC358-C.jpg",
+                "https://i.ibb.co/bRBwVRBC/02-DE4-FD0-94-E7-4-E9-C-B988-39301-FDFED96.jpg",
+                "https://i.ibb.co/dsLV9S8K/C117-D9-ED-A97-F-4-D2-B-BA2-A-9-F58-E074-AADB.jpg"
+            ]
+        };
+
+        function createMiniCarousel(containerId, images) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            images.forEach((imgSrc, index) => {
+                html += `
+                    <div class="mini-slide absolute inset-0 transition-opacity duration-700 ${index === 0 ? 'opacity-100' : 'opacity-0'}" style="transition: opacity 0.7s;">
+                        <img src="${imgSrc}" onclick="bounceImage(this)" class="rounded-2xl w-full h-72 object-cover cursor-pointer" alt="Hairstyle">
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
         }
 
-        setInterval(rotateReviews, 5000);
+        function createPerStyleCarousels() {
+            createMiniCarousel('box-braids-carousel', styleImages.box);
+            createMiniCarousel('knotless-carousel', styleImages.knotless);
+            createMiniCarousel('cornrows-carousel', styleImages.cornrows);
+            createMiniCarousel('twists-carousel', styleImages.twists);
+            createMiniCarousel('fulani-carousel', styleImages.fulani);
+        }
+
+        function rotateMiniCarousels() {
+            document.querySelectorAll('.mini-slide').forEach(slide => {
+                if (slide.classList.contains('opacity-100')) {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                } else if (Math.random() > 0.7) {
+                    slide.classList.add('opacity-100');
+                    slide.classList.remove('opacity-0');
+                }
+            });
+        }
+
+        // Testimonials (Rotating)
+        const testimonials = [
+            { img: "https://i.ibb.co/v6KWtYK3/IMG-6598.jpg", quote: "Lulu did my knotless braids for my wedding. They were flawless and lasted the whole honeymoon. Best decision ever!", name: "Amina K., South London" },
+            { img: "https://i.ibb.co/tPZQDdYx/IMG-6596.webp", quote: "I had Fulani braids done at home. Lulu was professional, the style was beautiful and she was so gentle.", name: "Zara M., South London" },
+            { img: "https://i.ibb.co/tMNrj8Hr/IMG-6595.webp", quote: "The box braids I got are the best I’ve ever had. Clean, neat, and the service was luxury from start to finish.", name: "Blessing O., South London" },
+            { img: "https://i.ibb.co/Kx1y6HFm/IMG-6593.jpg", quote: "Twists and locs were done with such care. Highly recommend!", name: "Fatima R., South London" },
+            { img: "https://i.ibb.co/FbvGZ39Z/IMG-6599.jpg", quote: "The service and results exceeded my expectations. I always leave feeling beautiful.", name: "Nadia S., South London" }
+        ];
+
+        function createTestimonialCarousel() {
+            const container = document.getElementById('testimonial-carousel');
+            let html = `<div class="relative">`;
+            testimonials.forEach((t, index) => {
+                html += `
+                    <div class="testimonial-slide ${index === 0 ? '' : 'hidden'} bg-white p-9 rounded-3xl border border-gray-100 text-center shadow-sm">
+                        <img src="${t.img}" class="w-20 h-20 mx-auto rounded-full object-cover mb-6 border-4 border-[#d4af77]" alt="${t.name}">
+                        <div class="flex justify-center mb-4 text-[#d4af77]">★★★★★</div>
+                        <p class="italic">"${t.quote}"</p>
+                        <div class="mt-6 font-medium">${t.name}</div>
+                    </div>
+                `;
+            });
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+
+        let currentTestimonial = 0;
+        function rotateTestimonials() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            slides.forEach(s => s.classList.add('hidden'));
+            slides[currentTestimonial].classList.remove('hidden');
+            currentTestimonial = (currentTestimonial + 1) % slides.length;
+        }
 
         function showBookingModal() {
             document.getElementById('booking-modal').classList.remove('hidden');
@@ -471,18 +620,83 @@
             `;
         }
 
+        function bounceImage(img) {
+            img.classList.add('bounce');
+            setTimeout(() => img.classList.remove('bounce'), 600);
+        }
+
+        function animateCounter(id, target, suffix = '+', duration = 2200) {
+            const element = document.getElementById(id);
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + suffix;
+                }
+            }, 16);
+        }
+
         function init() {
             initializeTailwind();
-            showReview(1);
+            createPerStyleCarousels();
+            createTestimonialCarousel();
             
+            setInterval(rotateTestimonials, 4500);
+            setInterval(rotateMiniCarousels, 2800);
+
+            setTimeout(() => {
+                animateCounter('happy-clients', 500);
+                animateCounter('exceptional-services', 8);
+                animateCounter('years-experience', 12, '+', 1800);
+            }, 800);
+
             document.addEventListener('keydown', function(e) {
                 if (e.key === "Escape") {
                     const modal = document.getElementById('booking-modal');
+                    const menu = document.getElementById('mobile-menu');
                     if (!modal.classList.contains('hidden')) hideBookingModal();
+                    if (!menu.classList.contains('hidden')) closeMobileMenu();
                 }
             });
             
             console.log('%c[Lulu’s Beauty Parlour] Premium website initialized successfully.', 'color:#666');
+        }
+
+        function createPerStyleCarousels() {
+            createMiniCarousel('box-braids-carousel', styleImages.box);
+            createMiniCarousel('knotless-carousel', styleImages.knotless);
+            createMiniCarousel('cornrows-carousel', styleImages.cornrows);
+            createMiniCarousel('twists-carousel', styleImages.twists);
+            createMiniCarousel('fulani-carousel', styleImages.fulani);
+        }
+
+        function createMiniCarousel(containerId, images) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            images.forEach((imgSrc, index) => {
+                html += `
+                    <div class="mini-slide absolute inset-0 transition-opacity duration-700 ${index === 0 ? 'opacity-100' : 'opacity-0'}" style="transition: opacity 0.7s;">
+                        <img src="${imgSrc}" onclick="bounceImage(this)" class="rounded-2xl w-full h-72 object-cover cursor-pointer" alt="Hairstyle">
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function rotateMiniCarousels() {
+            document.querySelectorAll('.mini-slide').forEach(slide => {
+                if (slide.classList.contains('opacity-100')) {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                } else if (Math.random() > 0.7) {
+                    slide.classList.add('opacity-100');
+                    slide.classList.remove('opacity-0');
+                }
+            });
         }
 
         window.onload = init;
